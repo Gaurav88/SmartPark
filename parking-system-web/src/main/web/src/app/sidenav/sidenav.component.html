@@ -1,0 +1,54 @@
+<div class="container-fluid">
+	<div class="row">
+<mat-toolbar style="background-image:url('../../assets/parking.jpg')">
+	<div class="row" style="width: 100%">
+		<div class="col-md-2">
+			<button mat-icon-button (click)="snav.toggle()" 
+			style="color: white;background-color: transparent;width: 60px;height: 60px;">
+			<mat-icon style="font-size: 50px">view_module</mat-icon>
+		</button>
+		</div>
+		<div class="col-md-4" style="text-align:left;"><button (click)="gotoHome()" 
+			style="background-color: transparent;border: 0;color: white;cursor:pointer;"><h1>iPark</h1></button></div>
+		<div class="col-md-4"></div>
+		<div class="col-md-2" >
+			<div class="row" style="color: white">
+				<div class="col-md-12" style="text-align:right;">
+					<button mat-icon-button  
+					style="color: white;background-color: transparent" (click)="gotoProfile()">
+					<mat-icon>person</mat-icon></button>
+				</div>
+				
+			</div>
+			<div class="row" style="color: white">
+					<div class="col-md-12" style="text-align:right;">
+							{{userName}}
+					</div>
+			</div>
+			
+		</div>
+	</div>
+	
+	
+</mat-toolbar>
+</div>
+<div class="row">
+	<mat-drawer-container style="width:100%">
+		<mat-drawer #snav [mode]="'side'" style="background-color: rgb(40, 54, 58)">
+			<mat-nav-list style="color: white">
+					<!-- <a mat-list-item>{{userName}}</a> -->
+                    <a mat-list-item routerLink="{{nav.url}}"  *ngFor="let nav of menuModel" [routerLinkActive]="['is-active']">{{nav.menuName}}</a>
+			</mat-nav-list>
+		</mat-drawer>
+
+		<mat-drawer-content style="background-color:white">
+			<router-outlet></router-outlet>
+		</mat-drawer-content>
+    </mat-drawer-container>
+</div>
+</div>
+
+
+<!-- Copyright 2018 Google Inc. All Rights Reserved.
+    Use of this source code is governed by an MIT-style license that
+    can be found in the LICENSE file at http://angular.io/license -->

@@ -1,0 +1,17 @@
+<div>
+    <div class="card"   style=" margin: 5%;" *ngIf="message=='open'">
+        <h5 class="card-header" style="background-color: rgb(32, 226, 184)">Scan your vehicle</h5>
+        <div class="card-body">
+                <barcode-scanner-livestream type="code_128" (valueChanges)="onValueChanges($event)"></barcode-scanner-livestream>
+                <div [hidden]="!barcodeValue">
+                        {{barcodeValue}}
+                </div>        
+        </div>
+        <div class="card-footer">
+                <a class="btn btn-danger" (click)="scan()">scan</a>
+        </div>
+    </div>
+    <div class="alert alert-success" style=" margin: 5%;" *ngIf="message=='Success'">
+                <strong>Success!</strong> Scanned Successfully
+        </div>
+</div>

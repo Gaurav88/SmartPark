@@ -1,0 +1,32 @@
+[
+    {
+        "menuName": "Home",
+        "url":"/dashboard-client",
+        "menuId":"clientHome"
+    },
+    {
+        "menuName": "Register vehicle",
+        "url":"/registration",
+        "menuId":"registration"
+    },
+    {
+        "menuName": "Book Parking",
+        "url":"/booking",
+        "menuId":"clientBooking"
+    },
+    {
+        "menuName": "Admin",
+        "url":"/admin",
+        "menuId":"login"
+    },
+    {
+        "menuName": "Help",
+        "url":"/help",
+        "menuId":"help"
+    },
+    {
+        "menuName": "Logout",
+        "url":"/logout",
+        "menuId":"logout"
+    }
+]

@@ -1,0 +1,45 @@
+<div class="card" style=" margin: 5%;">
+    <h5 class="card-header" style="background-color: rgb(32, 226, 184)">Today's parking details</h5>
+    <div class="card-body">
+        <div>
+            <input class="form-control" type="text" name="search" [(ngModel)]="searchText" autocomplete="off"
+                placeholder="Start searching for vehicle">
+        </div>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+
+                    <th>Vehicle No</th>
+                    <th>User Name</th>
+                    <th>Parking ID</th>
+                    <th>Parking Status</th>
+                    <th>Shift Time</th>
+                    <th>Take action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- <tr><input type="text" [(ngModel)]="term"></tr> -->
+                <tr *ngFor="let slot of parkingModel| filter:searchText">
+                    <td>{{slot.vehicalNo}}</td>
+                    <td>{{slot.userName}}</td>
+                    <td>{{slot.parkingDesc}}</td>
+                    <td>{{slot.status}}</td>
+                    <td>{{slot.shiftTime}}</td>
+                    <td *ngIf="slot.status=='BOOKED'"><button class="btn btn-success" (click)="markParked(slot)"> Mark
+                            Parked </button></td>
+                    <td *ngIf="slot.status=='PARKED'"><button class="btn btn-secondary" (click)="markLoggedOut(slot)">
+                            Mark LogedOut </button></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="card-footer">
+        <div class="row">
+            <div class="col-md-4"><a class="btn btn-danger" (click)="scan()">Scan</a></div>
+            <div class="col-md-4"></div>
+            <div class="col-md-4"></div>
+        </div>
+
+
+    </div>
+</div>

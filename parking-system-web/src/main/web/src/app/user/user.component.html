@@ -1,0 +1,23 @@
+<div class="card"  style=" margin: 5%;">
+    <h5 class="card-header" style="background-color: rgb(32, 226, 184)">
+        {{user.username}}</h5>
+    <div class="card-body">
+        <form>
+            <div class="form-group">
+                <label for="mobNo">Mobile no:</label>
+                <input  placeholder="{{user.mobNo}}" name="mobNo" class="form-control" id="mobNo" readonly>
+            </div>
+    
+            <div class="form-group">
+                <label for="vehicleNo">Vehical No:</label>
+                <input  placeholder="{{user.vehicleNo}}" name="vehicleNo" class="form-control" id="vehicleNo" readonly>
+            </div>
+    
+            <div class="form-group">
+                <label for="licenseNo">License no:</label>
+                <input  placeholder="{{user.licenseNo}}" name="licenseNo" class="form-control" id="licenseNo" readonly>
+            </div>
+            <button class="btn btn-success" (click)="changeProfileDetails()">Change Profile Details</button>
+        </form>
+    </div>
+</div>

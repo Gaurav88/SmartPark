@@ -1,0 +1,37 @@
+<div class="card" style=" margin: 5%;">
+    <h5 class="card-header" style="background-color: rgb(32, 226, 184)">Register Vehicle</h5>
+    <div class="card-body">
+        <form>
+            <div class="form-group">
+                <label for="mobNo">Mobile no:</label>
+                <input [(ngModel)]="user.mobNo" placeholder="Mobile No" name="mobNo" class="form-control" id="mobNo">
+            </div>
+
+            <div class="form-group">
+                <label for="vehicleNo">Vehicle No:</label>
+                <input [(ngModel)]="user.vehicleNo" placeholder="Vehicle No" name="vehicleNo" class="form-control"
+                    id="vehicleNo">
+            </div>
+
+            <div class="form-group">
+                <label for="licenseNo">License no:</label>
+                <input [(ngModel)]="user.licenseNo" placeholder="License No" name="licenseNo" class="form-control"
+                    id="licenseNo">
+            </div>
+
+            <div class="form-group">
+                <label for="licenseNo">Upload Doc:</label>
+                &nbsp;&nbsp;<input type="file" name="myFile">
+            </div>
+
+            <button class="btn btn-success" (click)="registerVehical()">Register</button>
+        </form>
+
+        <div class="alert alert-success" *ngIf="showRegistrationSuccess">
+            Vehical Registered Successfully!!!
+        </div>
+        <div class="alert alert-warning" *ngIf="showRegistrationFailure">
+            Error Occurred while registration!!!
+        </div>
+    </div>
+</div>

@@ -1,0 +1,7 @@
+[
+    {
+        "menuName": "Login/Sign Up",
+        "url":"/login",
+        "menuId":"login"
+    }
+]

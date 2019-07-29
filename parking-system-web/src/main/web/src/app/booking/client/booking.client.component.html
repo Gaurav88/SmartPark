@@ -1,0 +1,23 @@
+<div class="card" style=" margin: 5%;">
+    <h5 class="card-header" style="background-color: rgb(32, 226, 184)">Select your booking slot</h5>
+    <div class="card-body">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Shift Time</th>
+                    <th>Total Available Slots</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let slot of shiftTimings">
+                    <td>{{slot.timeSlots}}</td>
+                    <td>{{slot.countOfSlots}}</td>
+                    <td><button class="btn btn-success" (click)="bookParking(slot)"> Book </button></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+<div class="alert alert-warning" *ngIf="alert">
+    <strong>Warning!</strong> {{message}}
+</div>

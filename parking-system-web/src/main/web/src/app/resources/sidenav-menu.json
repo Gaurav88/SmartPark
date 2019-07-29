@@ -1,0 +1,22 @@
+[
+    {
+        "menuName": "Home",
+        "url":"./dashboard/client",
+        "menuId":"clientHome"
+    },
+    {
+        "menuName": "Booking",
+        "url":"./dashboard/booking",
+        "menuId":"clientBooking"
+    },
+    {
+        "menuName": "Help",
+        "url":"./help",
+        "menuId":"help"
+    },
+    {
+        "menuName": "Login/Sign in",
+        "url":"./Login",
+        "menuId":"login"
+    }
+]

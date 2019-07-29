@@ -1,0 +1,23 @@
+[
+    {
+        
+        "vehicleNumber":"MH03AD1234",
+        "userName":"Gaurav Gupta",
+        "parkingStatus":"booked"
+    },
+    {
+        "vehicleNumber":"MH03AD1294",
+        "userName":"Narendra ",
+        "parkingStatus":"booked"
+    },
+    {
+        "vehicleNumber":"MH03AD2334",
+        "userName":"Sheetal Shah",
+        "parkingStatus":"booked"
+    },
+    {
+        "vehicleNumber":"MH03AD9034",
+        "userName":"Saurav Sen",
+        "parkingStatus":"parked"
+    }
+]

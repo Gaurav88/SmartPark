@@ -1,0 +1,83 @@
+<div>
+        <div class="card" *ngIf="isCurrentBooking" style=" margin: 5%;">
+                <h5 class="card-header" style="background-color: rgb(32, 226, 184)">Your Current Booking</h5>
+                <div class="card-body">
+                        <div class="row">
+                                <div class="col-md-6">
+                                        <div class="row">
+                                                <div class="col-md-3">Booking Id :</div>
+                                                <div class="col-md-3">{{booking.bookingId}}</div>
+                                                <div class="col-md-3"></div>
+                                                <div class="col-md-3"></div>
+                                        </div>
+                                        <div class="row">
+                                                <div class="col-md-3">Parking Slot :</div>
+                                                <div class="col-md-3">{{booking.parkingDesc}}</div>
+                                                <div class="col-md-3"></div>
+                                                <div class="col-md-3"></div>
+                                        </div>
+                                        <div class="row">
+                                                <div class="col-md-3">In Time :</div>
+                                                <div class="col-md-3">{{booking.shiftTime}}</div>
+                                                <div class="col-md-3"></div>
+                                                <div class="col-md-3"></div>
+                                        </div>
+                                        <div class="row">
+                                                <div class="col-md-3">Level :</div>
+                                                <div class="col-md-3">{{booking.parkingLevel}}</div>
+                                                <div class="col-md-3"></div>
+                                                <div class="col-md-3"></div>
+                                        </div>
+                                        <div class="row">
+                                                <div class="col-md-3">Date :</div>
+                                                <div class="col-md-3">{{booking.bookingDate}}</div>
+                                                <div class="col-md-3"></div>
+                                                <div class="col-md-3"></div>
+                                        </div>
+                                </div>
+                                <div class="col-md-6">
+
+                                        <img src="../../assets/qr-code.png">
+                                </div>
+                        </div>
+
+
+
+
+
+                </div>
+                <div class="card-footer">
+                        <div class="row">
+                                <div class="col-md-4"><a class="btn btn-danger"
+                                                (click)="cancelBooking(booking)">Cancel</a></div>
+                                <!-- <div class="col-md-4"><a class="btn btn-danger" (click)="scan()" >Scan</a></div> -->
+                                <div class="col-md-4"></div>
+                        </div>
+
+
+                </div>
+        </div>
+
+        <div class="card" *ngIf="!isCurrentBooking" style=" margin: 5%;">
+                <h5 class="card-header">We would love to see you again</h5>
+                <div class="card-body">
+                        <div class="row">
+                                <p>You have currently no booking, Please book new parking slot by clicking on below
+                                        button</p>
+                        </div>
+                        <div class="row">
+                                <a class="btn btn-success" (click)="bookNew()">Book</a>
+                        </div>
+
+                </div>
+        </div>
+
+        <div class="alert alert-warning" *ngIf="message=='warning'">
+                <strong>Warning!</strong> {{message}}
+        </div>
+
+        <div class="alert alert-success" *ngIf="message=='Success'">
+                <strong>Success!</strong> Cancelled Succesufully
+        </div>
+
+</div>
